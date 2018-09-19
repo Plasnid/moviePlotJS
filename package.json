@@ -1,0 +1,22 @@
+{
+  "name": "movieplotjs",
+  "version": "1.0.0",
+  "description": "a movie described with javascript and prototypal inheritance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plasnid/moviePlotJS.git"
+  },
+  "author": "Stuart Sackler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Plasnid/moviePlotJS/issues"
+  },
+  "homepage": "https://github.com/Plasnid/moviePlotJS#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
