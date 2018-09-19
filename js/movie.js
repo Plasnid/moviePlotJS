@@ -1,12 +1,3 @@
-//our story will have planets, and planets have names
-let Planet = function(planetName){
-    this.planetName = planetName;
-};
-//our characters get around on vehicles which have types
-let Vehicle = function(vehicleType){
-    this.vehicleType = vehicleType;
-}
-//our story will also have chracters
 //characters have names, allegiances, and say hello!
 function Character(characterName){
     console.log("a new character has been made");
