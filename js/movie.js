@@ -47,7 +47,10 @@ Humanoid.prototype.whatSpecies = function(){
 }
 //lets make Lando!
 let Lando = new Humanoid("Lando", "Human");
+//lets give lando a job, make it a dot property of lando
+Lando.job = "Mayor of Cloud City";
 Lando.sayHi();
+console.log(Lando.job);
 Lando.whatSpecies();
 
 //now lets make Chewbacca!
@@ -57,6 +60,34 @@ Chewbacca.sayHi = function(){
 }
 Chewbacca.sayHi();
 Chewbacca.whatSpecies();
-Chewbacca.speakBleepBloop();
 
+/*
+finally lets make a force user.  A force user extends humanoid
+they get a name, species, forceSide(light or dark)
+their prototype should include functions for
+-use lightsaber
+-massive jump
+-force throwing
+*/
 
+function ForceUser(name, species, forceSide){
+    Humanoid.call(this, name, species);
+    this.forceSide = forceSide;
+    console.log(`we have a new force user called ${this.cName} who is a ${this.species} and is on the ${this.forceSide} of the force!`);
+}
+ForceUser.prototype = Object.create(Humanoid.prototype);
+ForceUser.prototype.useLightSaber = function(){
+    console.log(`${this.cName} is chopping stuff with a lightsaber!`);
+}
+ForceUser.prototype.massiveJump = function(){
+    console.log(`${this.cName} is jumping high in the air!`);
+}
+ForceUser.prototype.forceThrow = function(item){
+    console.log(`${this.cName} is throwing ${item} at you, using the force!`);
+}
+let Zarcon = new ForceUser("Zarcon", "Squirrel", "Dark");
+Zarcon.sayHi();
+Zarcon.whatSpecies();
+Zarcon.useLightSaber();
+Zarcon.massiveJump();
+Zarcon.forceThrow("acorns");
